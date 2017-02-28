@@ -15,10 +15,8 @@
 * [firebase server](https://firebase.google.com/docs/server/setup)
 * [bulma](https://github.com/jgthms/bulma)
  
-![](https://olxvlcccu.qnssl.com/blog/pyz8o.jpg?imageslim)
-
 <h2 align="center">Preview</h2>
-<img src="https://olxvlcccu.qnssl.com/blog/iwoeh.jpg?imageslim">
+![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
 
 <h2 align="center">Core Team</h2>
 
