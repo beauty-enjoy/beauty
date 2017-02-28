@@ -16,3 +16,6 @@ export function formatLocation (location = '') {
 export function doubleBase64 (str = '') {
   return Base64.encode(Base64.encode(str))
 }
+export function http2https (url) {
+  return url.replace('http://', 'https://')
+}

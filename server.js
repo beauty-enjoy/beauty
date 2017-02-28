@@ -7,13 +7,22 @@ var Koa = require('koa')
 var serve = require('koa-static')
 var serve = require('koa-static')
 var app = new Koa()
-var compiler = webpack(webpackConf)
+
 var publicPath = webpackConf.output.publicPath
 var history = require('koa-connect-history-api-fallback')
 const isProd = process.env.NODE_ENV === 'production'
 var port = process.env.PORT || 3000
 app.use(convert(require('koa-favicon')(path.join(__dirname, '/assets/favicon.ico'))));
 if (!isProd) {
+  webpackConf.entry.push('webpack-hot-middleware/client?reload=true')
+  webpackConf.plugins = webpackConf.plugins
+    .concat([
+      new webpack.optimize.OccurrenceOrderPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoEmitOnErrorsPlugin()
+    ])
+    
+  var compiler = webpack(webpackConf)  
   var devMiddleware = require('koa-webpack-dev-middleware')(compiler, {
     stats: {
       colors: true,

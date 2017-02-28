@@ -5,7 +5,7 @@
                 <div class="card-image">
                     <router-link  :to="'/post/'+item.key">
                         <figure class="image " >
-                        <img  :src="item.imageUrl" alt="Image">
+                        <img  :src="item.imageUrl | http2https" alt="Image">
                         </figure>
                     </router-link>
                 </div>
@@ -13,7 +13,7 @@
                     <div class="media">
                         <div class="media-left">
                             <figure class="image is-48x48" >
-                            <img :src="item.avatar" alt="Image">
+                            <img :src="item.avatar | http2https" alt="Image">
                             </figure>
                         </div>
                         <div class="media-content">

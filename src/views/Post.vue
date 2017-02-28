@@ -27,7 +27,7 @@
             {{post.content}}
         <p/>
 
-        <img v-for="url in post.images" :src="url" />
+        <img v-for="url in post.images" :src="url | http2https" />
     </div>
     </div>
 </template>
@@ -35,7 +35,7 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import { formatDateTime, formatLocation, doubleBase64 } from '../filters'
+import { doubleBase64, formatLocation } from '../filters'
 import Spinner from '../components/Spinner.vue'
 import GoHistory from '../components/GoHistory.vue'
 export default {
@@ -54,9 +54,8 @@ export default {
     GoHistory
   },
   methods: {
-    formatLocation,
     doubleBase64,
-    formatDateTime
+    formatLocation
   }
 }
 </script>

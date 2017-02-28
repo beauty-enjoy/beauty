@@ -36,7 +36,6 @@ export default {
 
   computed: Object.assign({
     pagingList () {
-      console.log(this.currentPage, this.pageLength, 4, paging(this.currentPage, this.pageLength, 4))
       return paging(this.currentPage, this.pageLength, 4)
     },
     formatCurrentPage () {

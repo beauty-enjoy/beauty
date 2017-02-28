@@ -5,7 +5,7 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 const isProd = process.env.NODE_ENV === 'production'
 
 module.exports = {
-  entry: ['./src/main.js', 'webpack-hot-middleware/client?reload=true'],
+  entry: ['./src/main.js'],
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: isProd ? '/' : '/dist/',
@@ -59,10 +59,7 @@ module.exports = {
     hints: false
   },
   plugins: [
-    new ExtractTextPlugin('styles.[hash].css'),
-    new webpack.optimize.OccurrenceOrderPlugin(),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.NoEmitOnErrorsPlugin(),
+    new ExtractTextPlugin('styles.[hash].css'),    
     new HtmlWebpackPlugin({
       template: './index.html'
     })
