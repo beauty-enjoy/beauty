@@ -18,11 +18,14 @@
 * [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
 * [firebase server](https://firebase.google.com/docs/server/setup)
 * [bulma](https://github.com/jgthms/bulma)
-* [more](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
+* [Other Excellent library](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
 
 <h2 align="center">TODO </h2>
 
-
+- [ ] update to ssr 
+- [ ] list all girls page
+- [ ] list all location page
+- [ ] add commit to posts
 
 <h2 align="center">Core Team</h2>
 
