@@ -35,19 +35,19 @@
         </div>
       </nav>
     </header>  
-    <transition name="fade" mode="out-in">
+    <transition name="fade" mode="out-in"> 
         <router-view class="view container"></router-view>      
     </transition>
     <footer class="footer">
     <div class="container">
       <div class="content has-text-centered">
         <p>
-          <strong>Beauty </strong> by <a href="http://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-          <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-          is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC ANS 4.0</a>.
+          <strong>Beauty </strong> by <a href="http://github.com/netpi">Netpi Chen</a>.  
+           source code is <a href="https://github.com/beauty-enjoy/beauty">beauty</a>. 
+           beauty data from <a href="https://github.com/beauty-enjoy/dbmeinv-firebase-api">dbmeinv-firebase-api</a>.
         </p>
         <p>
-          <a class="icon" href="https://github.com/jgthms/bulma">
+          <a class="icon" href="https://github.com/beauty-enjoy/beauty">
             <i class="fa fa-github"></i>
           </a>
         </p>
@@ -110,8 +110,7 @@ body {
 }
 .footer {
   background-color: white ;
-  border-top: 1px solid $gray ; 
-
+  box-shadow: 0px 0px 2px rgba(255, 56, 96, 0.2);
 }
 
 

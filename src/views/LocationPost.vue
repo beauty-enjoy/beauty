@@ -74,4 +74,8 @@ export default {
 .level {
     padding-top:65px
 }
+.title .fa{
+  color: $gray;
+  display: inline;
+}
 </style>

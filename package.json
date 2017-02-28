@@ -9,16 +9,18 @@
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "start": "cross-env NODE_ENV=production node server.js"
     },
-    "standard": {
-        "parser": "babel-eslint"
-    },
     "dependencies": {
         "axios": "^0.15.3",
         "bulma": "^0.3.1",
         "firebase": "^3.6.9",
         "js-base64": "^2.1.9",
+        "koa": "next",
+        "koa-connect-history-api-fallback": "https://github.com/davezuko/koa-connect-history-api-fallback",
+        "koa-convert": "^1.2.0",
         "koa-favicon": "^1.2.1",
         "koa-static": "^2.1.0",
+        "koa-webpack-dev-middleware": "^1.4.4",
+        "koa-webpack-hot-middleware": "^1.0.3",
         "stylus": "^0.54.5",
         "vue": "^2.1.0",
         "vue-router": "^2.2.1",
@@ -36,34 +38,21 @@
         "css-loader": "^0.26.1",
         "eslint": "^3.16.1",
         "eslint-config-standard": "^6.2.1",
-        "eslint-config-vue": "^2.0.2",
         "eslint-friendly-formatter": "^2.0.7",
         "eslint-loader": "^1.6.3",
-        "eslint-plugin-promise": "^3.4.2",
         "eslint-plugin-standard": "^2.0.1",
         "eslint-plugin-vue": "^2.0.1",
         "extract-text-webpack-plugin": "^2.0.0-beta",
+        "eslint-plugin-promise": "^3.4.0",
         "file-loader": "^0.9.0",
         "html-webpack-plugin": "^2.28.0",
-        "koa": "next",
-        "koa-connect-history-api-fallback": "https://github.com/davezuko/koa-connect-history-api-fallback",
-        "koa-convert": "^1.2.0",
-        "koa-webpack-dev-middleware": "^1.4.4",
-        "koa-webpack-hot-middleware": "^1.0.3",
-        "koa-webpack-middleware": "^1.0.3",
         "node-sass": "^4.5.0",
         "sass-loader": "^5.0.0",
-        "sass-module-importer": "^1.4.0",
-        "standard": "^8.6.0",
-        "standard-loader": "^5.0.0",
         "style-loader": "^0.13.1",
         "stylus-loader": "^2.4.0",
         "vue-loader": "^10.0.0",
         "vue-template-compiler": "^2.1.0",
         "webpack": "^2.2.0",
         "webpack-dev-server": "^2.2.0"
-    },
-    "peerDependencies": {
-        "standard": "*"
     }
 }
