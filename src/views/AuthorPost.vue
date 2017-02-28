@@ -33,7 +33,7 @@
 
 <script>
 import { mapState } from 'vuex'
-import { doubleBase64 } from '../filters'
+import { doubleBase64, formatLocation } from '../filters'
 import Spinner from '../components/Spinner.vue'
 import CardList from '../components/CardList.vue'
 import GoHistory from '../components/GoHistory.vue'
@@ -53,7 +53,8 @@ export default {
     GoHistory
   },
   methods: {
-    doubleBase64
+    doubleBase64,
+    formatLocation
   }
 }
 </script>
