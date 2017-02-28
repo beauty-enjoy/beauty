@@ -4,7 +4,8 @@
   </a>
   <h1>Beauty</h1>
   <p>       
-      https://beauty.now.sh Enjoy it !        
+      Enjoy it ! <br/>
+      https://beauty.now.sh 
   <p>
 </div>
 
@@ -17,7 +18,11 @@
 * [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
 * [firebase server](https://firebase.google.com/docs/server/setup)
 * [bulma](https://github.com/jgthms/bulma)
- 
+* [more](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
+
+<h2 align="center">TODO </h2>
+
+
 
 <h2 align="center">Core Team</h2>
 
