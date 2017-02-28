@@ -3,10 +3,13 @@
         <img width="200" heigth="200" src="https://olxvlcccu.qnssl.com/blog/1b1yv.png?imageslim">
   </a>
   <h1>Beauty</h1>
-  <p>
-       https://beauty.now.sh Enjoy it ! 
+  <p>       
+      https://beauty.now.sh Enjoy it !        
   <p>
 </div>
+
+<h2 align="center">Preview</h2>
+![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
 
 <h2 align="center">Related Tech </h2>
 
@@ -15,8 +18,6 @@
 * [firebase server](https://firebase.google.com/docs/server/setup)
 * [bulma](https://github.com/jgthms/bulma)
  
-<h2 align="center">Preview</h2>
-![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
 
 <h2 align="center">Core Team</h2>
 
