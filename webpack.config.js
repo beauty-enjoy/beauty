@@ -9,7 +9,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: isProd ? '/' : '/dist/',
-    filename: 'build.js'
+    filename: 'build.[hash].js'
   },
   module: {
     
@@ -49,13 +49,7 @@ module.exports = {
       }
     }
     ]
-  },
-  resolve: {
-    alias: {
-      'vue$': 'vue/dist/vue.common.js',
-      'bulma': 'bulma'
-    }
-  },
+  },  
   devServer: {
     progress: true,
     historyApiFallback: false,
@@ -65,7 +59,7 @@ module.exports = {
     hints: false
   },
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.[hash].css'),
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
