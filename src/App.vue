@@ -6,10 +6,10 @@
         <div class="container">
           <div class="nav-left">
             <router-link  class="nav-item" to="/all">              
-              <img class='logo' src="https://olxvlcccu.qnssl.com/blog/1vk1g.jpg?imageslim" alt="Bulma logo">
+               <img class='logo' src="https://olxvlcccu.qnssl.com/blog/rrnhu.png?imageslim" alt="Beauty logo">
             </router-link>                        
           </div>
-            <div class="nav-center">
+            <div class="nav-center wrap_nav">
               <router-link class="nav-item is-tab is-hidden-mobile" to="/all">all</router-link>
               <router-link class="nav-item is-tab is-hidden-mobile" to="/breast" >breast</router-link>
               <router-link class="nav-item is-tab is-hidden-mobile" to="/buttocks" >Buttocks</router-link>
@@ -23,7 +23,7 @@
             <span></span>
             <span></span>
           </span>
-          <div class="nav-right nav-menu" v-on:click="toggle">
+          <div class="nav-right nav-menu wrap_nav" v-on:click="toggle">
             <router-link  class="nav-item is-tab is-hidden-tablet" to="/all">all</router-link>
             <router-link  class="nav-item is-tab is-hidden-tablet" to="/breast" >breast</router-link>
             <router-link  class="nav-item is-tab is-hidden-tablet" to="/buttocks" >Buttocks</router-link>
@@ -75,8 +75,7 @@ export default {
 </script>
 
 <style lang="scss" >
-$gray: #dbdbdb;
-$turquoise : rgba(255, 56, 96, 0.58);
+
 @import "./scss/global" ;
 @import "node_modules/bulma/bulma" ;
 
@@ -84,15 +83,34 @@ body {
   padding-top: 55px;
   background-color: #f4f4f4;
 }
-.fade-enter-active, .fade-leave-active{
-  transition: all .2s ease
-}
-.fade-enter, .fade-leave-active{
-  opacity: 0
+
+.nav-item {
+  color: #999;
+  img {
+    max-height: 2.4rem !important;
+    margin-top: 0.5rem
   }
-.nav-item img {
-    max-height: 2.55rem;
+  &:hover {
+    color: #fff !important;  
+  }            
 }
+.nav-toggle  {
+  &:hover {
+    background-color: $headerbg !important;
+  }
+  span {
+    background-color: #999999 !important;
+  }
+}
+.is-tab {
+  &:hover {
+      border-bottom-color:#fff !important;
+  }
+}
+.router-link-active {
+  color: #fff !important;
+}
+
 .header {
     position: fixed;
     z-index: 999;
@@ -101,7 +119,13 @@ body {
     left: 0;
     right: 0;
     display: block;
-    background-color: white;
+    background-color: $headerbg;
+    nav {
+      background-color: $headerbg;
+    }
+}
+.nav-menu {
+  background-color: $headerbg;
 }
 .view {
     max-width: 800px;
@@ -115,6 +139,11 @@ body {
   // box-shadow: 0px 0px 2px rgba(255, 56, 96, 0.2);
   border-top: 1px solid #e5e5e5;
 }
-
+.fade-enter-active, .fade-leave-active{
+  transition: all .2s ease
+}
+.fade-enter, .fade-leave-active{
+  opacity: 0
+  }
 
 </style>

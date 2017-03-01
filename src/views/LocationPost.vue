@@ -6,20 +6,22 @@
             <div class='wrap_inner'>
                 <Pagination :urlPrefix="'location/' + currentLocation" :currentPage='currentPage' :pageLength='Math.ceil(location.keys.length/location.pageSize)'/>
            </div>        
-        </div>        
-        <nav class="level">
-            <div class="level-item has-text-centered">
-                <div>
-                    <p class="title">
-                        <i class="fa fa-map-marker" aria-hidden="true"/>
-                        {{ location.items[0].location | formatLocation}}
-                    </p>
-                </div>                
-            </div>        
-        </nav>
-        <hr/>   
-        <div class='content has-text-centered'>
-            <CardList :items="location.items" />
+        </div>
+        <div class='wrap_posts'>        
+          <nav class="level">
+              <div class="level-item has-text-centered">
+                  <div>
+                      <p class="title">
+                          <i class="fa fa-map-marker" aria-hidden="true"/>
+                          {{ location.items[0].location | formatLocation}}
+                      </p>
+                  </div>                
+              </div>        
+          </nav>
+          <hr/>   
+          <div class='content has-text-centered'>
+              <CardList :items="location.items" />
+          </div>
         </div>
     </template>
 </div>
@@ -77,5 +79,8 @@ export default {
 .title .fa{
   color: $gray;
   display: inline;
+}
+.wrap_posts {
+  margin-top: 5rem;;
 }
 </style>

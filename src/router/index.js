@@ -9,7 +9,7 @@ Vue.use(Router)
 export default new Router({
   mode: 'history',
   scrollBehavior: () => ({ y: 0 }),
-  linkActiveClass: 'is-active',
+  // linkActiveClass: 'is-active',
   routes: [
         { path: '/all/:page(\\d+)?', component: createListView(0) },
         { path: '/breast/:page(\\d+)?', component: createListView(2) },

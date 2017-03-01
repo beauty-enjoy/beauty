@@ -63,13 +63,6 @@ export default {
 
 <style lang="scss">
 @import '../scss/variable.scss';
-.wrap_posts {
-    margin: 0 0 10px 0 ;
-    padding:0 15px 40px ;
-    background: rgb(255,255,255);
-    border-radius: 6px;
-    border: 1px solid #e5e5e5;
-}
 
 .wrap_author {
     padding-left:10px
