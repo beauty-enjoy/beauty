@@ -5,9 +5,9 @@
       <nav class="nav has-shadow">
         <div class="container">
           <div class="nav-left">
-            <a class="nav-item">              
+            <router-link  class="nav-item" to="/all">              
               <img class='logo' src="https://olxvlcccu.qnssl.com/blog/1vk1g.jpg?imageslim" alt="Bulma logo">
-            </a>                        
+            </router-link>                        
           </div>
             <div class="nav-center">
               <router-link class="nav-item is-tab is-hidden-mobile" to="/all">all</router-link>
