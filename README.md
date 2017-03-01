@@ -22,7 +22,7 @@
 
 <h2 align="center">TODO </h2>
 
-- [ ] update to ssr 
+- [ ] upgrade to SSR
 - [ ] list all girls page
 - [ ] list all location page
 - [ ] add commit to posts
