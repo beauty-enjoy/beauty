@@ -82,10 +82,9 @@ export default {
 }    
 .wrap_items {
     // position: absolute;
-    
     margin: 50px 0;
     width: 100%;
-    background-color: #fff;
+    // background-color: #fff;
     border-radius: 2px;
     transition: all .5s cubic-bezier(.55,0,.1,1);
 }

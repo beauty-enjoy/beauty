@@ -81,7 +81,8 @@ $turquoise : rgba(255, 56, 96, 0.58);
 @import "node_modules/bulma/bulma" ;
 
 body {
-  padding-top: 55px
+  padding-top: 55px;
+  background-color: #f4f4f4;
 }
 .fade-enter-active, .fade-leave-active{
   transition: all .2s ease
@@ -107,10 +108,12 @@ body {
     margin: 0 auto;
     position: relative;
     padding: 45px 10px;
+    
 }
 .footer {
   background-color: white ;
-  box-shadow: 0px 0px 2px rgba(255, 56, 96, 0.2);
+  // box-shadow: 0px 0px 2px rgba(255, 56, 96, 0.2);
+  border-top: 1px solid #e5e5e5;
 }
 
 

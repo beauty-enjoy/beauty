@@ -59,7 +59,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" >
 @import '../scss/variable.scss';
 
 </style>
