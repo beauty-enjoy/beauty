@@ -3,13 +3,15 @@
         <img width="200" heigth="200" src="https://olxvlcccu.qnssl.com/blog/1b1yv.png?imageslim">
   </a>
   <h1>Beauty</h1>
-  <p>       
-      Enjoy it ! <br/>
+  <p>  
+      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex <br/>    
+      Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
 </div>
 
 <h2 align="center">Preview</h2>
+
 ![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
 <h2 align="center">Develop </h2>
 
