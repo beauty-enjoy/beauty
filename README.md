@@ -28,6 +28,8 @@
 * [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
 * [firebase server](https://firebase.google.com/docs/server/setup)
 * [bulma](https://github.com/jgthms/bulma)
+* [now.sh](https://github.com/Flotype/now)
+* [koa](https://github.com/koajs/koa)
 * [Other Excellent library](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
 
 <h2 align="center">TODO </h2>
