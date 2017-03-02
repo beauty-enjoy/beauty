@@ -4,7 +4,7 @@
   </a>
   <h1>Beauty</h1>
   <p>  
-      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex <br/>    
+      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex + bulma <br/>    
       Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
