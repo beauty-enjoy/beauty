@@ -77,7 +77,7 @@ export default {
 <style lang="scss" >
 
 @import "./scss/global" ;
-@import "node_modules/bulma/bulma" ;
+@import "~bulma" ;
 
 body {
   padding-top: 55px;
