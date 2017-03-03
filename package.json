@@ -23,7 +23,7 @@
         "koa-webpack-hot-middleware": "^1.0.3",
         "stylus": "^0.54.5",
         "vue": "^2.1.0",
-        "vue-bulma-pagination": "^1.0.1",
+        "vue-bulma-pagination": "^1.0.2",
         "vue-router": "^2.2.1",
         "vue-spinner": "^1.0.2",
         "vuex": "^2.1.2",
