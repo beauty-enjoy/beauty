@@ -4,7 +4,7 @@
     <template v-if="!loading" >
         <div class='wrap_page'>
             <div class='wrap_inner'>
-                <Pagination :urlPrefix="'location/' + currentLocation" :currentPage='currentPage' :pageLength='Math.ceil(location.keys.length/location.pageSize)'/>
+                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :pageLength='Math.ceil(location.keys.length/location.pageSize)'/>
            </div>        
         </div>
         <div class='wrap_posts'>        
@@ -32,7 +32,7 @@ import { mapState } from 'vuex'
 import Spinner from '../components/Spinner.vue'
 import CardList from '../components/CardList.vue'
 import GoHistory from '../components/GoHistory.vue'
-import Pagination from '../components/Pagination.vue'
+import Pagination from 'vue-bulma-pagination'
 export default {
   name: 'location_items',
   computed: Object.assign({

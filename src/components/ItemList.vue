@@ -4,7 +4,7 @@
     <div class='container' v-if='!loading'>
         <div class='wrap_page'>
             <div class='wrap_inner'>
-                <pagination :urlPrefix='cidtype' :currentPage=currentPage :pageLength='Math.ceil( keys.length / pageSize)'/>
+                <pagination :urlPrefix="'/'+cidtype" :currentPage=currentPage :pageLength='Math.ceil( keys.length / pageSize)'/>
             </div>
         </div>
         <div class='wrap_items container'> 
@@ -19,7 +19,7 @@
 import { mapState, mapGetters } from 'vuex'
 import Spinner from './Spinner.vue'
 import CardList from './CardList.vue'
-import Pagination from './Pagination.vue'
+import Pagination from 'vue-bulma-pagination'
 
 export default {
   name: 'Itemlist',
