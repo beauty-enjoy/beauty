@@ -21,6 +21,7 @@
         "koa-static": "^2.1.0",
         "koa-webpack-dev-middleware": "^1.4.4",
         "koa-webpack-hot-middleware": "^1.0.3",
+        "nprogress": "^0.2.0",
         "stylus": "^0.54.5",
         "vue": "^2.1.0",
         "vue-bulma-pagination": "^1.0.5",

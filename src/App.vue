@@ -1,5 +1,4 @@
 <template>
-
   <div>
     <header class = "header">
       <nav class="nav has-shadow">
@@ -58,10 +57,11 @@
 
 <script>
 import { mapState } from 'vuex'
+import NProgress from 'nprogress'
 export default {
   name: 'app',
   computed: Object.assign({},
-    mapState(['toggleClassName'])
+    mapState(['toggleClassName', 'progress'])
   ),
   methods: {
     toggle: () => {
@@ -70,14 +70,21 @@ export default {
       toggle.classList.toggle('is-active')
       menu.classList.toggle('is-active')
     }
+  },
+  watch: {
+    progress (to) {
+      NProgress.start()
+      NProgress.set(to)
+    }
   }
 }
 </script>
 
 <style lang="scss" >
-
-@import "./scss/global" ;
+@import "./scss/variable";
 @import "~bulma" ;
+@import "./scss/global" ;
+@import "./scss/nprogress" ;
 
 body {
   padding-top: 55px;
@@ -142,7 +149,7 @@ body {
 .fade-enter-active, .fade-leave-active{
   transition: all .2s ease
 }
-.fade-enter, .fade-leave-active{
+.fade-enter, .fade-leave-active {
   opacity: 0
   }
 
