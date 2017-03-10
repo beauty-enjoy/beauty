@@ -9,13 +9,7 @@
             </router-link>                        
           </div>
             <div class="nav-center wrap_nav">
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/all">all</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/breast" >breast</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/buttocks" >Buttocks</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/leg" >leg</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/face" >face</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/stockings" >Stockings</router-link>
-              <router-link class="nav-item is-tab is-hidden-mobile" to="/others" >others</router-link>
+              <router-link v-for = "menu in Object.values(menus)" class="nav-item is-tab is-hidden-mobile" :to="'/'+menu">{{menu}}</router-link>
             </div>
           <span class="nav-toggle" v-on:click="toggle">
             <span></span>
@@ -23,13 +17,7 @@
             <span></span>
           </span>
           <div class="nav-right nav-menu wrap_nav" v-on:click="toggle">
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/all">all</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/breast" >breast</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/buttocks" >Buttocks</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/leg" >leg</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/face" >face</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/stockings" >Stockings</router-link>
-            <router-link  class="nav-item is-tab is-hidden-tablet" to="/others" >others</router-link>
+            <router-link v-for = "menu in Object.values(menus)"  class="nav-item is-tab is-hidden-tablet" :to="'/'+menu">{{menu}}</router-link>
           </div>
         </div>
       </nav>
@@ -61,7 +49,7 @@ import NProgress from 'nprogress'
 export default {
   name: 'app',
   computed: Object.assign({},
-    mapState(['toggleClassName', 'progress'])
+    mapState(['toggleClassName', 'progress', 'menus'])
   ),
   methods: {
     toggle: () => {

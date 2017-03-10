@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import menus from './menus'
 import { getItembyKey, getItemsbyKeys, getKeys, getKeysbyAuthor, getKeysbyLocation } from './api'
 
 Vue.use(Vuex)
@@ -27,20 +28,13 @@ const state = {
     currentPage: 1,
     pageSize: 9
   },
-  progress: 0
+  progress: 0,
+  menus
 }
 const getters = {
   itemLength: (state) => state.items.length,
   cidtype: (state) => {
-    return {
-      '0': 'all',
-      '2': 'breast',
-      '3': 'leg',
-      '4': 'face',
-      '5': 'others',
-      '6': 'buttocks',
-      '7': 'stockings'
-    }[String(state.cid)]
+    return [String(state.cid)]
   }
 }
 const actions = {
