@@ -11,6 +11,12 @@ module.exports = {
     publicPath: isProd ? '/' : '/dist/',
     filename: 'build.[hash].js'
   },
+  resolve: {
+    extensions: ['.js', '.vue'],
+    alias: {
+      "@" : path.resolve( __dirname ,"src") 
+    }
+  },
   module: {
     
     rules: [

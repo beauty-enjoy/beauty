@@ -32,13 +32,14 @@
     </div>
 </div>
 </template>
+</div>
 </template>
 
 <script>
 import { mapState, mapGetters } from 'vuex'
 import { doubleBase64, formatLocation } from '../filters'
-import Spinner from '../components/Spinner.vue'
-import GoHistory from '../components/GoHistory.vue'
+import Spinner from '../components/Spinner'
+import GoHistory from '../components/GoHistory'
 export default {
   name: 'post',
   computed: Object.assign({

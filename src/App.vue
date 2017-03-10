@@ -5,7 +5,7 @@
         <div class="container">
           <div class="nav-left">
             <router-link  class="nav-item" to="/all">              
-               <img class='logo' src="https://olxvlcccu.qnssl.com/blog/rrnhu.png?imageslim" alt="Beauty logo">
+               <img class='logo' src="https://olxvlcccu.qnssl.com/blog/rrnhu.png?imageslim" alt="Beauty logo" />
             </router-link>                        
           </div>
             <div class="nav-center wrap_nav">
@@ -26,21 +26,22 @@
         <router-view class="view container"></router-view>      
     </transition>
     <footer class="footer">
-    <div class="container">
-      <div class="content has-text-centered">
-        <p>
-          <strong>Beauty </strong> by <a href="http://github.com/netpi">Netpi Chen</a>.  
-           source code is <a href="https://github.com/beauty-enjoy/beauty">beauty</a>. 
-           beauty data from <a href="https://github.com/beauty-enjoy/dbmeinv-firebase-api">dbmeinv-firebase-api</a>.
-        </p>
-        <p>
-          <a class="icon" href="https://github.com/beauty-enjoy/beauty">
-            <i class="fa fa-github"></i>
-          </a>
-        </p>
+      <div class="container">
+        <div class="content has-text-centered">
+          <p>
+            <strong>Beauty </strong> by <a href="http://github.com/netpi">Netpi Chen</a>.  
+            source code is <a href="https://github.com/beauty-enjoy/beauty">beauty</a>. 
+            beauty data from <a href="https://github.com/beauty-enjoy/dbmeinv-firebase-api">dbmeinv-firebase-api</a>.
+          </p>
+          <p>
+            <a class="icon" href="https://github.com/beauty-enjoy/beauty">
+              <i class="fa fa-github"></i>
+            </a>
+          </p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
 </template>
 
 <script>

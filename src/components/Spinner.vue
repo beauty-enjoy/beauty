@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+import PulseLoader from 'vue-spinner/src/PulseLoader'
 export default {
   name: 'spinner',
   props: {

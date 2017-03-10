@@ -36,9 +36,9 @@
 <script>
 import { mapState } from 'vuex'
 import { doubleBase64, formatLocation } from '../filters'
-import Spinner from '../components/Spinner.vue'
-import CardList from '../components/CardList.vue'
-import GoHistory from '../components/GoHistory.vue'
+import Spinner from '../components/Spinner'
+import CardList from '../components/CardList'
+import GoHistory from '../components/GoHistory'
 export default {
   name: 'authorItems',
   computed: Object.assign({

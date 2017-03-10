@@ -29,9 +29,9 @@
 
 <script>
 import { mapState } from 'vuex'
-import Spinner from '../components/Spinner.vue'
-import CardList from '../components/CardList.vue'
-import GoHistory from '../components/GoHistory.vue'
+import Spinner from '../components/Spinner'
+import CardList from '../components/CardList'
+import GoHistory from '../components/GoHistory'
 import Pagination from 'vue-bulma-pagination'
 export default {
   name: 'location_items',

@@ -17,8 +17,8 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import Spinner from './Spinner.vue'
-import CardList from './CardList.vue'
+import Spinner from './Spinner'
+import CardList from './CardList'
 import Pagination from 'vue-bulma-pagination'
 
 export default {
