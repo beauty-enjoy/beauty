@@ -9,7 +9,7 @@
             </router-link>                        
           </div>
             <div class="nav-center wrap_nav">
-              <router-link v-for = "menu in Object.values(menus)" class="nav-item is-tab is-hidden-mobile" :to="'/'+menu">{{menu}}</router-link>
+              <router-link v-for = "menu in objectValues(menus)" class="nav-item is-tab is-hidden-mobile" :to="'/'+menu">{{menu}}</router-link>
             </div>
           <span class="nav-toggle" v-on:click="toggle">
             <span></span>
@@ -17,7 +17,7 @@
             <span></span>
           </span>
           <div class="nav-right nav-menu wrap_nav" v-on:click="toggle">
-            <router-link v-for = "menu in Object.values(menus)"  class="nav-item is-tab is-hidden-tablet" :to="'/'+menu">{{menu}}</router-link>
+            <router-link v-for = "menu in objectValues(menus)"  class="nav-item is-tab is-hidden-tablet" :to="'/'+menu">{{menu}}</router-link>
           </div>
         </div>
       </nav>
@@ -45,6 +45,8 @@
 </template>
 
 <script>
+'use strict'
+
 import { mapState } from 'vuex'
 import NProgress from 'nprogress'
 export default {
@@ -58,7 +60,8 @@ export default {
       const menu = document.querySelector('.nav-menu')
       toggle.classList.toggle('is-active')
       menu.classList.toggle('is-active')
-    }
+    },
+    objectValues: (obj) => Object.keys(obj).map(key => obj[key])
   },
   watch: {
     progress (to) {
