@@ -85,12 +85,13 @@ const actions = {
       .then(() => commit('SET_PROGRESS', {progress: 1}))
   },
   GET_LOCATION_ITEM_DATA: ({ commit, dispatch }, { location, currentPage }) => {
+    commit('SET_PROGRESS', {progress: 0.1})
     commit('SET_LOADING', { loading: true })
     commit('SET_LOCATION_PAGE', { currentPage })
     getKeysbyLocation(location)
       .then(keys => commit('SET_LOCATION_KEYS', { keys }))
       .then(() => dispatch('GET_LOCATION_ITEMS'))
-      .then(() => commit('SET_PROGRESS', {progress: 0.4}))
+      .then(() => commit('SET_PROGRESS', {progress: 0.7}))
   },
   GET_LOCATION_ITEMS: ({ commit, dispatch, state }) => {
     const { currentPage, pageSize, keys } = state.location
