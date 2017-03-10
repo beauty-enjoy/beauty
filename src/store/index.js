@@ -34,7 +34,7 @@ const state = {
 const getters = {
   itemLength: (state) => state.items.length,
   cidtype: (state) => {
-    return [String(state.cid)]
+    return menus[String(state.cid)]
   }
 }
 const actions = {
