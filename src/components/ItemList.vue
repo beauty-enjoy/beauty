@@ -4,7 +4,7 @@
     <div class='container' v-if='!loading'>
         <div class='wrap_page'>
             <div class='wrap_inner'>
-                <pagination modifiers='1' :urlPrefix="'/'+cidtype" :currentPage=currentPage :pageLength='Math.ceil( keys.length / pageSize)'/>
+                <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
             </div>
         </div>
         <div class='wrap_items container'> 

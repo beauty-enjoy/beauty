@@ -4,7 +4,7 @@
     <template v-if="!loading" >
         <div class='wrap_page'>
             <div class='wrap_inner'>
-                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :pageLength='Math.ceil(location.keys.length/location.pageSize)'/>
+                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :lastPage='Math.ceil(location.keys.length/location.pageSize)'/>
            </div>        
         </div>
         <div class='wrap_posts'>        
