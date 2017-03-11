@@ -4772,9 +4772,9 @@ vm-browserify@0.0.4:
   dependencies:
     indexof "0.0.1"
 
-vue-bulma-pagination@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/vue-bulma-pagination/-/vue-bulma-pagination-1.1.0.tgz#15587be245763da830681090d000dd283bd5dcf5"
+vue-bulma-pagination@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/vue-bulma-pagination/-/vue-bulma-pagination-1.1.1.tgz#a2a89c374ca4cd6d5f72bc0042b769b7b212255f"
 
 vue-hot-reload-api@^2.0.1:
   version "2.0.8"
