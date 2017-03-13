@@ -15,7 +15,7 @@
 ![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
 <h2 align="center">Develop </h2>
 
-* git clone https://github.com/beauty-enjoy/beauty` 
+* `git clone https://github.com/beauty-enjoy/beauty` 
 * `yarn install ` or `npm install `
 * local develop `npm run dev`
 * build for production `npm run build`
