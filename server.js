@@ -1,0 +1,11 @@
+var convert = require('koa-convert')
+var path = require('path')
+var Koa = require('koa')
+var serve = require('koa-static')
+var history = require('koa-connect-history-api-fallback')
+var app = new Koa()
+app.use(convert(history()))
+app.use(convert(serve(path.join(__dirname, '/dist/'))))
+var port = process.env.PORT || 3000
+console.log(' Browse to http://localhost:' + port)
+app.listen(port)

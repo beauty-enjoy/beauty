@@ -1,13 +1,14 @@
 {
   "name": "vue-webpack",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A Vue.js project",
   "author": "netpi <moon@netpi.me>",
   "private": true,
   "scripts": {
-    "dev": "node build/dev-server.js",
-    "build": "node build/build.js",
-    "lint": "eslint --ext .js,.vue src"
+    "dev": "cross-env NODE_ENV=development node build/dev-server.js",
+    "build": "cross-env NODE_ENV=production webpack node build/build.js",
+    "lint": "eslint --ext .js,.vue src",
+    "start": "cross-env NODE_ENV=production node server.js"
   },
   "dependencies": {
     "axios": "^0.15.3",
@@ -21,13 +22,19 @@
     "vue-router": "^2.2.1",
     "vue-spinner": "^1.0.2",
     "vuex": "^2.1.2",
-    "vuex-router-sync": "^4.1.2"
+    "vuex-router-sync": "^4.1.2",
+    "koa": "next",
+    "koa-connect-history-api-fallback": "https://github.com/davezuko/koa-connect-history-api-fallback",
+    "koa-convert": "^1.2.0",
+    "koa-favicon": "^1.2.1",
+    "koa-static": "^2.1.0"
   },
   "devDependencies": {
     "autoprefixer": "^6.7.2",
     "babel-core": "^6.22.1",
     "babel-eslint": "^7.1.1",
     "babel-loader": "^6.2.10",
+    "cross-env": "^3.0.0",
     "babel-plugin-transform-runtime": "^6.22.0",
     "babel-preset-env": "^1.2.1",
     "babel-preset-stage-2": "^6.22.0",

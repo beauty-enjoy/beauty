@@ -35,6 +35,9 @@ const getters = {
   itemLength: (state) => state.items.length,
   cidtype: (state) => {
     return menus[String(state.cid)]
+  },
+  menusValues: (state) => {
+    return Object.keys(state.menus).map(key => state.menus[key])
   }
 }
 const actions = {
