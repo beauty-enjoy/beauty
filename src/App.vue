@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="app">
     <header class = "header">
       <nav class="nav has-shadow">
         <div class="container">
@@ -22,8 +22,13 @@
         </div>
       </nav>
     </header>  
-    <transition name="fade" mode="out-in"> 
-        <router-view class="view container"></router-view>      
+    <transition 
+      name="fade"
+      mode="out-in"
+      enter-active-class="fadeIn"
+      leave-active-class="fadeOut"
+      appear> 
+        <router-view class="view container animated"></router-view>      
     </transition>
     <footer class="footer">
       <div class="container">
@@ -65,6 +70,7 @@ export default {
   },
   watch: {
     progress (to) {
+      console.log('to',to)
       NProgress.start()
       NProgress.set(to)
     }
@@ -73,6 +79,10 @@ export default {
 </script>
 
 <style lang="scss" >
+@import '~animate.css';
+.animated {
+  animation-duration: .377s;
+}
 @import "./scss/variable";
 @import "~bulma" ;
 @import "./scss/global" ;
@@ -131,7 +141,7 @@ body {
     margin: 0 auto;
     position: relative;
     padding: 45px 10px;
-    
+    min-height: 600px;
 }
 .footer {
   background-color: white ;

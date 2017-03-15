@@ -4,7 +4,7 @@
     <template v-if="!loading" >
         <div class='wrap_page'>
             <div class='wrap_inner'>
-                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :lastPage='Math.ceil(location.keys.length/location.pageSize)'/>
+                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :lastPage='Math.ceil(location.keys.length/location.pageSize)'/> 
            </div>        
         </div>
         <div class='wrap_posts'>        
@@ -28,37 +28,29 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
 import Spinner from '../components/Spinner'
 import CardList from '../components/CardList'
 import GoHistory from '../components/GoHistory'
-import Pagination from 'vue-bulma-pagination'
+import Pagination from 'vue-bulma-pagination/src/Pagination'
+function preFetch(store){
+  return store.dispatch('GET_LOCATION_ITEM_DATA')
+}
 export default {
   name: 'location_items',
-  computed: Object.assign({
-    currentPage () {
-      return Number(this.$store.state.route.params.page) || 1
-    },
-    currentLocation () {
-      return this.$store.state.route.params.location
-    }
-  },
-    mapState(['location', 'loading'])
+  computed: Object.assign({},
+    mapState(['location', 'loading']),
+    mapGetters(['currentPage','currentLocation'])
   ),
-  created: function () {
-    this.loadData()
-  },
-  methods: {
-    loadData () {
-      this.$store.dispatch('GET_LOCATION_ITEM_DATA', {
-        location: this.$store.state.route.params.location,
-        currentPage: this.currentPage
-      })
+  beforeMount: function () {
+    if (this.$root._isMounted) {
+      preFetch(this.$store)
     }
   },
+  preFetch : preFetch,  
   watch: {
     currentPage () {
-      this.loadData()
+      preFetch(this.$store)
     }
   },
   components: {

@@ -40,17 +40,19 @@ import { mapState, mapGetters } from 'vuex'
 import { doubleBase64, formatLocation } from '../filters'
 import Spinner from '../components/Spinner'
 import GoHistory from '../components/GoHistory'
+function preFetch(store){
+    return store.dispatch('GET_POST')
+}
 export default {
   name: 'post',
-  computed: Object.assign({
-
-  },
+  computed: Object.assign({},
     mapState(['post', 'loading']),
     mapGetters(['location'])
   ),
   created: function () {
-    this.$store.dispatch('GET_POST', { key: this.$store.state.route.params.key })
+    preFetch(this.$store)
   },
+  preFetch:preFetch,
   components: {
     Spinner,
     GoHistory

@@ -15,13 +15,7 @@ const state = {
   post: {
     location: ''
   },
-  authorItems: [
-    {
-      avatar: '',
-      location: '',
-      authorname: ''
-    }
-  ],
+  authorItems: [],
   location: {
     keys: [],
     items: [],
@@ -38,67 +32,72 @@ const getters = {
   },
   menusValues: (state) => {
     return Object.keys(state.menus).map(key => state.menus[key])
-  }
+  },
+  currentPage: (state) => Number(state.route.params.page) || 1,
+  currentLocation: (state) => state.route.params.location,
+  postKey: (state) => state.route.params.key
 }
+
 const actions = {
-  GET_ITEM_DATA: ({ commit, dispatch, state }, { cid, currentPage = 1 }) => {
+  START_LOADING: ({ commit }) => {
     commit('SET_LOADING', { loading: true })
-    commit('SET_PAGE', { currentPage })
-    commit('SET_PROGRESS', {progress: 0.1})
-    getKeys(cid).then(keys => keys)
+    commit('SET_PROGRESS', { progress: 0.1 })
+  },
+  END_LOADING: ({ commit }) => {
+    commit('SET_LOADING', { loading: false })
+    commit('SET_PROGRESS', { progress: 1 })
+  },
+  GET_ITEM_DATA: ({ getters,commit, dispatch, state }, { cid }) => {
+    dispatch('START_LOADING')
+    commit('SET_PAGE', { currentPage: getters.currentPage })
+    return getKeys(cid)
       .then(keys => commit('SET_KEYS', { keys }))
       .then(keys => commit('SET_CID', { cid }))
+      .then(() => commit('SET_PROGRESS', { progress: 0.7 }))
       .then(() => dispatch('GET_ITEMS'))
-      .then(() => commit('SET_PROGRESS', {progress: 0.7}))
   },
   GET_ITEMS: ({ commit, dispatch, state }) => {
     const { currentPage, pageSize, keys } = state
     const _start = keys.length - currentPage * pageSize
     const start = _start > 0 ? _start : 0
     const end = _start + pageSize
-    getItemsbyKeys(keys.slice(start, end))
+    return getItemsbyKeys(keys.slice(start, end))
       .then(items => commit('SET_ITEMS', { items }))
-      .then(() => commit('SET_LOADING', { loading: false }))
-      .then(() => commit('SET_PROGRESS', { progress: 1 }))
+      .then(() => dispatch('END_LOADING'))
   },
-  GET_POST: ({ commit, dispatch, state }, { key }) => {
+  GET_POST: ({ getters, commit, dispatch, state }) => {
     commit('SET_LOADING', { loading: true })
-    commit('SET_PROGRESS', {progress: 0.5})
-    getItembyKey(key)
+    commit('SET_PROGRESS', { progress: 0.5 })
+    return getItembyKey(getters.postKey)
       .then(post => commit('SET_POST', { post }))
-      .then(() => commit('SET_LOADING', { loading: false }))
-      .then(() => commit('SET_PROGRESS', {progress: 1}))
+      .then(() => dispatch('END_LOADING'))
   },
-  GET_AUTHOR_ITEM_DATA: ({ commit }, { author }) => {
-    commit('SET_PROGRESS', {progress: 0.1})
-    commit('SET_LOADING', { loading: true })
-    getKeysbyAuthor(author)
+  GET_AUTHOR_ITEM_DATA: ({ commit, dispatch }, { author }) => {
+    dispatch('START_LOADING')
+    return getKeysbyAuthor(author)
       .then(keys => {
-        commit('SET_PROGRESS', {progress: 0.7})
+        commit('SET_PROGRESS', { progress: 0.7 })
         return getItemsbyKeys(keys)
       })
       .then(authorItems => commit('SET_AUTHOR_ITEM_DATA', { authorItems }))
-      .then(() => commit('SET_LOADING', { loading: false }))
-      .then(() => commit('SET_PROGRESS', {progress: 1}))
+      .then(() => dispatch('END_LOADING'))
   },
-  GET_LOCATION_ITEM_DATA: ({ commit, dispatch }, { location, currentPage }) => {
-    commit('SET_PROGRESS', {progress: 0.1})
-    commit('SET_LOADING', { loading: true })
-    commit('SET_LOCATION_PAGE', { currentPage })
-    getKeysbyLocation(location)
+  GET_LOCATION_ITEM_DATA: ({ getters, commit, dispatch }) => {
+    dispatch('START_LOADING')
+    commit('SET_LOCATION_PAGE', { currentPage : getters.currentPage })
+    return getKeysbyLocation(getters.currentLocation)
       .then(keys => commit('SET_LOCATION_KEYS', { keys }))
+      .then(() => commit('SET_PROGRESS', { progress: 0.7 }))
       .then(() => dispatch('GET_LOCATION_ITEMS'))
-      .then(() => commit('SET_PROGRESS', {progress: 0.7}))
   },
   GET_LOCATION_ITEMS: ({ commit, dispatch, state }) => {
     const { currentPage, pageSize, keys } = state.location
     const _start = keys.length - currentPage * pageSize
     const start = _start > 0 ? _start : 0
     const end = _start + pageSize
-    getItemsbyKeys(keys.slice(start, end))
+    return getItemsbyKeys(keys.slice(start, end))
       .then(items => commit('SET_LOCATION_ITEM_DATA', { items }))
-      .then(() => commit('SET_LOADING', { loading: false }))
-      .then(() => commit('SET_PROGRESS', {progress: 1}))
+      .then(() => dispatch('END_LOADING'))
   }
 }
 

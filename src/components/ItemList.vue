@@ -1,15 +1,19 @@
 <template>
   <div >
-    <Spinner :loading='loading' />            
-    <div class='container' v-if='!loading'>
+    <div class='container' >
         <div class='wrap_page'>
             <div class='wrap_inner'>
                 <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
             </div>
         </div>
-        <div class='wrap_items container'> 
-            <CardList :items="items"/>
-        </div>        
+        <transition 
+            mode="out-in"
+            :enter-active-class="enterActiveClass"
+            appear> 
+          <div class='animated wrap_items container ' v-if='!loading'> 
+            <CardList :items="items"/> 
+          </div>        
+        </transition>
     </div>  
     
   </div>  
@@ -19,19 +23,26 @@
 import { mapState, mapGetters } from 'vuex'
 import Spinner from './Spinner'
 import CardList from './CardList'
-import Pagination from 'vue-bulma-pagination'
+import Pagination from 'vue-bulma-pagination/src/Pagination'
 
 export default {
   name: 'Itemlist',
   props: {
     cid: Number
   },
-  created () {
-    this.loadData()
+  data () {
+    return {
+      enterActiveClass : "fadeInRight",
+      // leaveActiveClass : "fadeOutLeft"
+    }
   },
-
+  beforeMount () {
+    if (this.$root._isMounted) {
+      this.loadData()
+    }
+  },  
   methods: {
-    loadData (to = this.currentPage, from = -1) {
+    loadData (to = this.currentPage, from = -1) {      
       this.$store.dispatch('GET_ITEM_DATA', {
         cid: this.cid,
         currentPage: Number(this.$store.state.route.params.page) || 1
@@ -48,6 +59,9 @@ export default {
   ),
   watch: {
     currentPage (to, from) {
+        this.enterActiveClass = to < from
+        ? "fadeInLeft"
+        : "fadeInRight"
       this.loadData(to, from)
     }
   },
@@ -86,7 +100,7 @@ export default {
     width: 100%;
     // background-color: #fff;
     border-radius: 2px;
-    transition: all .5s cubic-bezier(.55,0,.1,1);
+    transition: all .5s cubic-bezier(.55,0,.1,1);    
 }
 .wrapper {
     text-align:center;

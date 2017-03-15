@@ -39,15 +39,19 @@ import { doubleBase64, formatLocation } from '../filters'
 import Spinner from '../components/Spinner'
 import CardList from '../components/CardList'
 import GoHistory from '../components/GoHistory'
+function preFetch(store){
+    return store.dispatch('GET_AUTHOR_ITEM_DATA', { author: store.state.route.params.author })
+}
 export default {
   name: 'authorItems',
-  computed: Object.assign({
-
-  },
+  computed: Object.assign({},
     mapState(['authorItems', 'loading'])
   ),
-  created: function () {
-    this.$store.dispatch('GET_AUTHOR_ITEM_DATA', { author: this.$store.state.route.params.author })
+  preFetch: preFetch,
+  beforeMount : function() {
+    if (this.$root._isMounted) {
+        preFetch(this.$store)
+    }
   },
   components: {
     Spinner,

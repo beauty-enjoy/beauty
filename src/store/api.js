@@ -1,4 +1,4 @@
-import dbmnRef from './fb.js'
+import dbmnRef from 'firebase-api'
 import Promise from 'bluebird'
 const dataRef = dbmnRef.child('data')
 

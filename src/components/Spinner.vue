@@ -8,6 +8,7 @@
 
 <script>
 import PulseLoader from 'vue-spinner/src/PulseLoader'
+
 export default {
   name: 'spinner',
   props: {
@@ -15,7 +16,7 @@ export default {
   },
   components: {
     PulseLoader
-  }
+  }  
 }
 </script>
 
