@@ -4,7 +4,7 @@
   </a>
   <h1>Beauty</h1>
   <p>  
-      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex + bulma <br/>    
+      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
       Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
@@ -34,7 +34,7 @@
 
 <h2 align="center">TODO </h2>
 
-- [ ] upgrade to SSR
+- [x] upgrade to SSR
 - [ ] list all girls page
 - [ ] list all location page
 - [ ] add commit to posts
