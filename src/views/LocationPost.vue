@@ -47,7 +47,7 @@ export default {
   preFetch: preFetch,
   data () {
     return {
-      enterActiveClass: null
+      enterActiveClass: 'fadeIn'
     }
   },
   watch: {

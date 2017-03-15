@@ -87,7 +87,12 @@ var webpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
-  ]
+  ],
+  resolve: {
+    alias: {
+      'firebase-api': './firebase-client.js'
+    }
+  }
 })
 
 if (config.build.productionGzip) {

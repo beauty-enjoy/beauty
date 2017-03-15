@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      enterActiveClass: null
+      enterActiveClass: 'fadeIn'
       // leaveActiveClass : 'fadeOutLeft'
     }
   },
