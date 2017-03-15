@@ -47,7 +47,7 @@ const actions = {
     commit('SET_LOADING', { loading: false })
     commit('SET_PROGRESS', { progress: 1 })
   },
-  GET_ITEM_DATA: ({ getters,commit, dispatch, state }, { cid }) => {
+  GET_ITEM_DATA: ({ getters, commit, dispatch, state }, { cid }) => {
     dispatch('START_LOADING')
     commit('SET_PAGE', { currentPage: getters.currentPage })
     return getKeys(cid)
@@ -84,7 +84,7 @@ const actions = {
   },
   GET_LOCATION_ITEM_DATA: ({ getters, commit, dispatch }) => {
     dispatch('START_LOADING')
-    commit('SET_LOCATION_PAGE', { currentPage : getters.currentPage })
+    commit('SET_LOCATION_PAGE', { currentPage: getters.currentPage })
     return getKeysbyLocation(getters.currentLocation)
       .then(keys => commit('SET_LOCATION_KEYS', { keys }))
       .then(() => commit('SET_PROGRESS', { progress: 0.7 }))

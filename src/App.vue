@@ -23,7 +23,6 @@
       </nav>
     </header>  
     <transition 
-      name="fade"
       mode="out-in"
       enter-active-class="fadeIn"
       leave-active-class="fadeOut"
@@ -70,7 +69,6 @@ export default {
   },
   watch: {
     progress (to) {
-      console.log('to',to)
       NProgress.start()
       NProgress.set(to)
     }
@@ -148,11 +146,4 @@ body {
   // box-shadow: 0px 0px 2px rgba(255, 56, 96, 0.2);
   border-top: 1px solid #e5e5e5;
 }
-.fade-enter-active, .fade-leave-active{
-  transition: all .2s ease
-}
-.fade-enter, .fade-leave-active {
-  opacity: 0
-  }
-
 </style>

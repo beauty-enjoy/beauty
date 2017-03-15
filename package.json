@@ -1,12 +1,12 @@
 {
-  "name": "vue-webpack2",
-  "version": "1.1.0",
-  "description": "A Vue.js project",
+  "name": "beauty",
+  "version": "1.2.0",
+  "description": "clone dbmeinv.com with vue vuex ssr firebase ",
   "author": "netpi <moon@netpi.me>",
-  "private": true,
+  "private": false,
   "scripts": {
     "dev": "node server.js",
-    "lint": "eslint --ext .js,.vue src",
+    "lint": "eslint --fix  --ext .js,.vue src",
     "start": "cross-env NODE_ENV=production node server.js",
     "build": "rimraf dist && npm run build:client && npm run build:server",
     "build:client": "cross-env NODE_ENV=production webpack --config build/webpack.client-prod.conf.js --progress --hide-modules",
@@ -84,7 +84,7 @@
     "webpack-merge": "^2.6.1"
   },
   "engines": {
-    "node": ">= 4.0.0",
+    "node": ">=6.0",
     "npm": ">= 3.0.0"
   },
   "browserslist": [

@@ -1,8 +1,10 @@
 <template>
-<div>
-    <Spinner :loading="loading" />
-    <template v-if="!loading" >
-        <div class='wrap_posts'>
+    <transition 
+        mode="out-in"
+        enter-active-class="fadeIn"
+        leave-active-class="fadeOut"
+        appear> 
+        <div class='wrap_posts animated' v-if="!loading">
             <nav class="level">
                 <div class="level-item has-text-centered">
                     <div>
@@ -29,8 +31,7 @@
                 <CardList :items="authorItems" />
             </div>
         </div>
-    </template>
-</div>
+    </transition>
 </template>
 
 <script>
@@ -39,8 +40,8 @@ import { doubleBase64, formatLocation } from '../filters'
 import Spinner from '../components/Spinner'
 import CardList from '../components/CardList'
 import GoHistory from '../components/GoHistory'
-function preFetch(store){
-    return store.dispatch('GET_AUTHOR_ITEM_DATA', { author: store.state.route.params.author })
+function preFetch (store) {
+  return store.dispatch('GET_AUTHOR_ITEM_DATA', { author: store.state.route.params.author })
 }
 export default {
   name: 'authorItems',
@@ -48,9 +49,9 @@ export default {
     mapState(['authorItems', 'loading'])
   ),
   preFetch: preFetch,
-  beforeMount : function() {
+  beforeMount: function () {
     if (this.$root._isMounted) {
-        preFetch(this.$store)
+      preFetch(this.$store)
     }
   },
   components: {

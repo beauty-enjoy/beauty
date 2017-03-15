@@ -23,7 +23,7 @@ export default context => {
   // which is resolved when the action is complete and store state has been
   // updated.
   return Promise.all(matchedComponents.map(component => {
-    if (component.preFetch) {      
+    if (component.preFetch) {
       return component.preFetch(store)
     }
   })).then(() => {

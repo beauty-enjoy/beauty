@@ -1,21 +1,13 @@
 <template>
   <div >
-    <div class='container' >
-        <div class='wrap_page'>
-            <div class='wrap_inner'>
-                <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
-            </div>
+    <div class='wrap_page'>
+        <div class='wrap_inner'>
+            <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
         </div>
-        <transition 
-            mode="out-in"
-            :enter-active-class="enterActiveClass"
-            appear> 
-          <div class='animated wrap_items container ' v-if='!loading'> 
-            <CardList :items="items"/> 
-          </div>        
-        </transition>
-    </div>  
-    
+    </div>
+    <div class='wrap_items'> 
+      <CardList :items="items" :loading='loading' :enterActiveClass='enterActiveClass' /> 
+    </div>        
   </div>  
 </template>
 
@@ -32,17 +24,17 @@ export default {
   },
   data () {
     return {
-      enterActiveClass : "fadeInRight",
-      // leaveActiveClass : "fadeOutLeft"
+      enterActiveClass: 'fadeInRight'
+      // leaveActiveClass : 'fadeOutLeft'
     }
   },
   beforeMount () {
     if (this.$root._isMounted) {
       this.loadData()
     }
-  },  
+  },
   methods: {
-    loadData (to = this.currentPage, from = -1) {      
+    loadData (to = this.currentPage, from = -1) {
       this.$store.dispatch('GET_ITEM_DATA', {
         cid: this.cid,
         currentPage: Number(this.$store.state.route.params.page) || 1
@@ -59,9 +51,9 @@ export default {
   ),
   watch: {
     currentPage (to, from) {
-        this.enterActiveClass = to < from
-        ? "fadeInLeft"
-        : "fadeInRight"
+      this.enterActiveClass = to < from
+      ? 'fadeInLeft'
+      : 'fadeInRight'
       this.loadData(to, from)
     }
   },
@@ -95,12 +87,10 @@ export default {
     }
 }    
 .wrap_items {
-    // position: absolute;
     margin: 50px 0;
     width: 100%;
-    // background-color: #fff;
     border-radius: 2px;
-    transition: all .5s cubic-bezier(.55,0,.1,1);    
+    // overflow: hidden;
 }
 .wrapper {
     text-align:center;
@@ -110,23 +100,13 @@ export default {
         display: table-cell;
         vertical-align: middle;
   }
-
-
 .slide-left-enter, .slide-right-leave-active {
   opacity: 0;
   transform: translate(30px, 0);
   }
-
 .slide-left-leave-active, .slide-right-enter {
   opacity: 0;
   transform: translate(-30px, 0);
-  }
-
-.fade2-enter-active, .fade2-leave-active {
-  transition: all .2s ease
-}
-.fade2-enter, .fade2-leave-active {
-  opacity: 0
   }
 }
 </style>

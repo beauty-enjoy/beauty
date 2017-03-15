@@ -1,29 +1,26 @@
 <template>
-<div>
-    <Spinner :loading="loading" />
-    <template v-if="!loading" >
-        <div class='wrap_page'>
-            <div class='wrap_inner'>
-                <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :lastPage='Math.ceil(location.keys.length/location.pageSize)'/> 
-           </div>        
-        </div>
-        <div class='wrap_posts'>        
-          <nav class="level">
-              <div class="level-item has-text-centered">
-                  <div>
-                      <p class="title">
-                          <i class="fa fa-map-marker" aria-hidden="true"/>
-                          {{ location.items[0].location | formatLocation}}
-                      </p>
-                  </div>                
-              </div>        
-          </nav>
-          <hr/>   
-          <div class='content has-text-centered'>
-              <CardList :items="location.items" />
-          </div>
-        </div>
-    </template>
+<div >
+  <div class='wrap_page'>
+      <div class='wrap_inner'>
+          <pagination :urlPrefix="'/location/' + currentLocation" :currentPage='currentPage' :lastPage='Math.ceil(location.keys.length/location.pageSize)'/> 
+      </div>        
+  </div>
+  <div class='wrap_posts' v-if="!loading" >        
+    <nav class="level">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="title">
+                    <i class="fa fa-map-marker" aria-hidden="true"/>
+                    {{ location.items[0].location | formatLocation}}
+                </p>
+            </div>                
+        </div>        
+    </nav>
+    <hr/>   
+    <div class='content has-text-centered'>
+      <CardList :items="location.items" :loading='loading' :enterActiveClass='enterActiveClass' /> 
+    </div>
+  </div>
 </div>
 </template>
 
@@ -33,23 +30,31 @@ import Spinner from '../components/Spinner'
 import CardList from '../components/CardList'
 import GoHistory from '../components/GoHistory'
 import Pagination from 'vue-bulma-pagination/src/Pagination'
-function preFetch(store){
+function preFetch (store) {
   return store.dispatch('GET_LOCATION_ITEM_DATA')
 }
 export default {
   name: 'location_items',
   computed: Object.assign({},
     mapState(['location', 'loading']),
-    mapGetters(['currentPage','currentLocation'])
+    mapGetters(['currentPage', 'currentLocation'])
   ),
   beforeMount: function () {
     if (this.$root._isMounted) {
       preFetch(this.$store)
     }
   },
-  preFetch : preFetch,  
+  preFetch: preFetch,
+  data () {
+    return {
+      enterActiveClass: 'fadeInRight'
+    }
+  },
   watch: {
-    currentPage () {
+    currentPage (to, from) {
+      this.enterActiveClass = to < from
+        ? 'fadeInLeft'
+        : 'fadeInRight'
       preFetch(this.$store)
     }
   },
