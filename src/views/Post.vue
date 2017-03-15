@@ -1,41 +1,33 @@
 <template>
-<div>
-    <transition 
-        mode="out-in"
-        enter-active-class="fadeIn"
-        leave-active-class="fadeOut"
-        appear> 
-        <div v-if="!loading" class ='wrap_posts animated'>  
-            <nav class="level">
-                <div class="level-item has-text-centered">
-                    <div>
-                        <p class="title">{{post.title}}</p>
-                        <p class='desc'>
-                            <router-link :to="'/location/'+doubleBase64(formatLocation(post.location))" >
-                                <i class="fa fa-map-marker" aria-hidden="true"/>
-                                {{ post.location | formatLocation}}
-                            </router-link>
-                            <router-link :to="'/author/' + doubleBase64(post.authorname)">
-                            <i class="fa fa-user" aria-hidden="true"></i>
-                            @{{ post.authorname}} ;
-                            </router-link>
-                            <i class="fa fa-clock-o" aria-hidden="true"></i>  
-                            {{ new Date(post.date)| formatDateTime}}
-                        </p>
-                    </div>
+    <div v-if="!loading" class ='wrap_posts'>  
+        <nav class="level">
+            <div class="level-item has-text-centered">
+                <div>
+                    <p class="title">{{post.title}}</p>
+                    <p class='desc'>
+                        <router-link :to="'/location/'+doubleBase64(formatLocation(post.location))" >
+                            <i class="fa fa-map-marker" aria-hidden="true"/>
+                            {{ post.location | formatLocation}}
+                        </router-link>
+                        <router-link :to="'/author/' + doubleBase64(post.authorname)">
+                        <i class="fa fa-user" aria-hidden="true"></i>
+                        @{{ post.authorname}} ;
+                        </router-link>
+                        <i class="fa fa-clock-o" aria-hidden="true"></i>  
+                        {{ new Date(post.date)| formatDateTime}}
+                    </p>
                 </div>
-            </nav>
-            <hr/>
-            <div class='content has-text-centered'>
-                <p>
-                    {{post.content}}
-                <p/>
-
-                <img v-for="url in post.images" :src="url | http2https" />
             </div>
+        </nav>
+        <hr/>
+        <div class='content has-text-centered'>
+            <p>
+                {{post.content}}
+            <p/>
+
+            <img v-for="url in post.images" :src="url | http2https" />
         </div>
-    </transition>
-</div>
+    </div>
 </template>
 
 <script>

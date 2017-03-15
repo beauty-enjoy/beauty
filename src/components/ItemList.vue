@@ -24,7 +24,7 @@ export default {
   },
   data () {
     return {
-      enterActiveClass: 'fadeInRight'
+      enterActiveClass: null
       // leaveActiveClass : 'fadeOutLeft'
     }
   },
@@ -35,6 +35,9 @@ export default {
   },
   methods: {
     loadData (to = this.currentPage, from = -1) {
+      this.enterActiveClass = from === -1
+      ? 'fadeIn'
+      : to < from ? 'fadeInLeft' : 'fadeInRight'
       this.$store.dispatch('GET_ITEM_DATA', {
         cid: this.cid,
         currentPage: Number(this.$store.state.route.params.page) || 1
@@ -51,9 +54,6 @@ export default {
   ),
   watch: {
     currentPage (to, from) {
-      this.enterActiveClass = to < from
-      ? 'fadeInLeft'
-      : 'fadeInRight'
       this.loadData(to, from)
     }
   },

@@ -22,13 +22,15 @@
         </div>
       </nav>
     </header>  
-    <transition 
-      mode="out-in"
-      enter-active-class="fadeIn"
-      leave-active-class="fadeOut"
-      appear> 
-        <router-view class="view container animated"></router-view>      
-    </transition>
+    <div class="view container">
+      <transition 
+        mode="out-in"
+        enter-active-class="fadeIn"
+        leave-active-class="fadeOut"
+        appear> 
+          <router-view class="animated"></router-view>      
+      </transition>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="content has-text-centered">

@@ -47,14 +47,14 @@ export default {
   preFetch: preFetch,
   data () {
     return {
-      enterActiveClass: 'fadeInRight'
+      enterActiveClass: null
     }
   },
   watch: {
     currentPage (to, from) {
-      this.enterActiveClass = to < from
-        ? 'fadeInLeft'
-        : 'fadeInRight'
+      this.enterActiveClass = from === -1
+      ? 'fadeIn'
+      : to < from ? 'fadeInLeft' : 'fadeInRight'
       preFetch(this.$store)
     }
   },
