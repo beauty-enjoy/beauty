@@ -5,7 +5,6 @@
   <h1>Beauty</h1>
   <p>  
       豆瓣美女 clone , built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
-      我又参考了目前能搜到的vue ssr项目, 完成了这个repo <br/>
       So. Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
