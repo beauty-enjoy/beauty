@@ -1,5 +1,4 @@
 import dbmnRef from 'firebase-api'
-import Promise from 'bluebird'
 const dataRef = dbmnRef.child('data')
 
 export function getKeys (cid = 0) {
