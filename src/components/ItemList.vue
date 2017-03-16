@@ -5,7 +5,7 @@
             <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
         </div>
     </div>
-    <div class='wrap_items'> 
+    <div class='wrap_items wrap_posts' v-if="!loading"> 
       <CardList :items="items" :loading='loading' :enterActiveClass='enterActiveClass' /> 
     </div>        
   </div>  
@@ -89,7 +89,7 @@ export default {
 .wrap_items {
     margin: 50px 0;
     width: 100%;
-    border-radius: 2px;
+    border-radius: 2px;    
     // overflow: hidden;
 }
 .wrapper {

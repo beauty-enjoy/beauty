@@ -1,10 +1,10 @@
 <div align="center">
-  <a href="https://github.com/beauty-enjoy/dbmeinv-firebase-ap">
+  <a href="https://beauty.now.sh ">
         <img width="200" heigth="200" src="https://olxvlcccu.qnssl.com/blog/1b1yv.png?imageslim">
   </a>
   <h1>Beauty</h1>
   <p>  
-      豆瓣美女 clone built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
+      豆瓣美女 clone , built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
       Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
@@ -35,6 +35,7 @@
 <h2 align="center">TODO </h2>
 
 - [x] upgrade to SSR
+- [ ] add cache for api
 - [ ] list all girls page
 - [ ] list all location page
 - [ ] add commit to posts
@@ -47,14 +48,9 @@
       <td align="center" valign="top">
         <img width="150" height="150" src="https://github.com/netpi.png?s=150">
         <br>
-        <a href="https://github.com/netpi">Netpi Chen</a>
-        <p>beauty spider</p>
-        <br>
+        <a href="https://github.com/netpi">Netpi Chen</a>        
         <p>Founder for this repo</p>
       </td>      
      </tr>
   </tbody>
 </table>
-
-
-

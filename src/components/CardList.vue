@@ -64,14 +64,19 @@ export default {
 @import '../scss/variable.scss';
 .wrap_card {
     padding-top: 1.2rem;
+    padding-bottom: 0.1em;
+    padding-right: 0.1em;
+    padding-left: 0.1em;
     overflow: hidden;
     width: 100%
 }
 .wrap_card_column {
     padding: 10px 10px 10px 10px;
+    
     .card {
         width:100%;
         height:100%;
+        
     }
 }
 </style>

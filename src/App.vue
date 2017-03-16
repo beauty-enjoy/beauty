@@ -85,6 +85,8 @@ export default {
 .animated {
   animation-duration: .377s;
 }
+$fa-font-path: '~font-awesome/fonts/';
+@import '~font-awesome/scss/font-awesome';
 @import "./scss/variable";
 @import "~bulma" ;
 @import "./scss/global" ;
