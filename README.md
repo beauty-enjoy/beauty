@@ -12,12 +12,10 @@
 
 <h2 align="center">Preview</h2>
 
-> 因为相关资料少的原因, vue的ssr学习起来还是有一点麻烦. 为了让学习的过程更加有动力, 所以我决定clone 豆瓣美女 .
+> vue的ssr的相关资料不多, 学习起来还是有一点麻烦. 因为厌倦了总是HackerNews的demo. 也为了让学习的过程更加有动力, 所以我决定clone 豆瓣美女 .
 
-* 首先我先爬下了豆瓣美女上所有的美女贴,大概有10W个.
-* 然后把美女按照分类保存到firebase中,这个firebase项目的repo是 : [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
-
-* 最后我参考了所有能搜到的vue ssr项目, 完成了这个repo
+* **建库:** 我先爬下了豆瓣美女上所有的美女贴,大概有10W个,并保持自动更新到到firebase中, 这个firebase项目的repo是 : [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
+* **开发:** 我参考了所有能搜到的vue ssr项目, 完成了这个repo
   
 
 ![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
