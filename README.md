@@ -5,7 +5,10 @@
   <h1>Beauty</h1>
   <p>  
       豆瓣美女 clone , built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
-      Enjoy it ! <br/>
+      因为相关资料少的原因, vue的ssr学习起来还是有一点麻烦. 为了让学习的过程更加有动力, 所以我决定clone 豆瓣美女 
+      首先我先爬下了豆瓣美女上所有的美女贴,大概有10W个,并按照分类保存到firebase中,这个firebase项目的repo是 [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
+      我又参考了目前能搜到的vue ssr项目, 完成了这个repo <br/>
+      So. Enjoy it ! <br/>
       https://beauty.now.sh 
   <p>
 </div>
