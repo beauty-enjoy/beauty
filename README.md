@@ -10,18 +10,21 @@
   <p>
 </div>
 
-<h2 align="center">Preview</h2>
+<h2 align="center">WHY</h2>
 
 > 这是一个 VUE + VUEX + FIREBASE + BULMA … 实现的 SPA SSR项目
 >
 > VUE SSR的相关资料不多, 最全面的demo就是官方的 [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) . 因为各种版本的 hackernews clone 看的太多了,也有点审美疲劳 . 所以有了 [beauty-enjoy/beauty](https://github.com/beauty-enjoy/beauty) 这个Repo
 
+<h2 align="center">DO</h2>
 
 * 先从 [dbmeinv.com](http://dbmeinv.com) 上爬取了数据源,分类存储到firebase中 , 并且保持实时更新 这部分repo是[beauty-enjoy/dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
 * 然后参考了现有的一些ssr项目 , 利用 [beauty-enjoy/dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api) 完成了[beauty-enjoy/beauty](https://github.com/beauty-enjoy/beauty) 这个Repo
   
+<h2 align="center">Preview</h2>
 
 ![](https://olxvlcccu.qnssl.com/blog/y96bi.jpg?imageslim)
+
 <h2 align="center">Develop </h2>
 
 * `git clone https://github.com/beauty-enjoy/beauty` 
