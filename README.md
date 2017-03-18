@@ -36,11 +36,10 @@
 
 <h2 align="center">Related Repo </h2>
 
-* [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
-* [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
-* [firebase server](https://firebase.google.com/docs/server/setup)
-* [bulma](https://github.com/jgthms/bulma)
-* [now.sh](https://now.sh)
+* Data: [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api) [firebase server](https://firebase.google.com/docs/server/setup)
+* JS: [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
+* UI: [bulma](https://github.com/jgthms/bulma)
+* SERVER: [now.sh](https://now.sh)
 * [Other Excellent library](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
 
 <h2 align="center">TODO </h2>
