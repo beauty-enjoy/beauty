@@ -27,12 +27,14 @@
 
 <h2 align="center">Develop </h2>
 
-* `git clone https://github.com/beauty-enjoy/beauty` 
-* `yarn install ` or `npm install `
-* local develop `npm run dev`
-* build for production `npm run build`
-* production server `npm run start `
-
+```sh
+# local develop
+npm run dev
+# build for production 
+npm run build
+# production server 
+npm run start
+```
 
 <h2 align="center">Related Repo </h2>
 
