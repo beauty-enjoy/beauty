@@ -4,16 +4,12 @@
   </a>
   <h1>Beauty</h1>
   <p>  
-      豆瓣美女 clone , built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
-      So. Enjoy it ! <br/>
-      https://beauty.now.sh 
+      这是一个 VUE + VUEX + FIREBASE + BULMA … 实现的 SPA SSR项目  <br/>
+      <a href="https://beauty.now.sh " target="__blank" > live demo</a>
   <p>
 </div>
 
-<h2 align="center">WHY</h2>
-
-> 这是一个 VUE + VUEX + FIREBASE + BULMA … 实现的 SPA SSR项目
->
+<h2 align="center">WHY</h2> 
 > VUE SSR的相关资料不多, 最全面的demo就是官方的 [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) . 因为各种版本的 hackernews clone 看的太多了,也有点审美疲劳 . 所以有了 [beauty-enjoy/beauty](https://github.com/beauty-enjoy/beauty) 这个Repo
 
 <h2 align="center">DO</h2>
