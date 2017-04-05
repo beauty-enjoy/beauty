@@ -4,16 +4,13 @@
   </a>
   <h1>Beauty</h1>
   <p>  
-      豆瓣美女 clone , built with Vue 2.0 + vue-router + vuex + bulma + ssr <br/>    
-      So. Enjoy it ! <br/>
-      https://beauty.now.sh 
+      这是一个 VUE + VUEX + FIREBASE + BULMA … 实现的 SPA SSR项目  <br/>
+      <a href="https://beauty.now.sh " target="__blank" > live demo</a>
   <p>
 </div>
 
-<h2 align="center">WHY</h2>
+<h2 align="center">WHY</h2> 
 
-> 这是一个 VUE + VUEX + FIREBASE + BULMA … 实现的 SPA SSR项目
->
 > VUE SSR的相关资料不多, 最全面的demo就是官方的 [vue-hackernews-2.0](https://github.com/vuejs/vue-hackernews-2.0) . 因为各种版本的 hackernews clone 看的太多了,也有点审美疲劳 . 所以有了 [beauty-enjoy/beauty](https://github.com/beauty-enjoy/beauty) 这个Repo
 
 <h2 align="center">DO</h2>
@@ -27,21 +24,21 @@
 
 <h2 align="center">Develop </h2>
 
-* `git clone https://github.com/beauty-enjoy/beauty` 
-* `yarn install ` or `npm install `
-* local develop `npm run dev`
-* build for production `npm run build`
-* production server `npm run start `
-
+```sh
+# local develop
+npm run dev
+# build for production 
+npm run build
+# production server 
+npm run start
+```
 
 <h2 align="center">Related Repo </h2>
 
-* [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api)
-* [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
-* [firebase server](https://firebase.google.com/docs/server/setup)
-* [bulma](https://github.com/jgthms/bulma)
-* [now.sh](https://now.sh)
-* [koa](https://github.com/koajs/koa)
+* Data: [dbmeinv-firebase-api](https://github.com/beauty-enjoy/dbmeinv-firebase-api) [firebase server](https://firebase.google.com/docs/server/setup)
+* JS: [vue](https://github.com/vuejs/vue) [vuex](https://github.com/vuejs/vuex)
+* UI: [bulma](https://github.com/jgthms/bulma)
+* SERVER: [now.sh](https://now.sh)
 * [Other Excellent library](https://github.com/beauty-enjoy/beauty/blob/master/package.json) 
 
 <h2 align="center">TODO </h2>
