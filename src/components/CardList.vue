@@ -61,7 +61,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped>
-@import '../scss/variable.scss';
+@import '../scss/variable.scss';\
 .wrap_card {
     padding-top: 1.2rem;
     padding-bottom: 0.1em;

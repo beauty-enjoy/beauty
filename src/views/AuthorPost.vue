@@ -17,6 +17,10 @@
                             <i class="fa fa-user" aria-hidden="true"></i>
                             @{{ authorItems[0].authorname}} 
                         </a>
+                        <a :href="'https://www.douban.com/search?cat=1005&q='+authorItems[0].authorname" target="__blank">
+                            <i class="fa fa-link" aria-hidden="true"></i>
+                            豆瓣主页
+                        </a>
                     </p>
                 </div>                
             </div>        
