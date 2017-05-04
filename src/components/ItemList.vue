@@ -2,7 +2,7 @@
   <div >
     <div class='wrap_page'>
         <div class='wrap_inner'>
-            <pagination modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
+            <pagination prev="后退" next="前进"  modifiers='' :urlPrefix="'/'+cidtype" :currentPage=currentPage :lastPage='Math.ceil( keys.length / pageSize)'/>
         </div>
     </div>
     <div class='wrap_items wrap_posts' v-if="!loading"> 
